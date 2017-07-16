@@ -18,7 +18,7 @@ var pusher = new Pusher({
 });
 
 app.post('/pusher/auth', function(req, res) {
-  console.log(req);
+  console.log(req.body);
   var socketId = req.body.socket_id;
   var channel = req.body.channel_name;
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
